@@ -1,15 +1,14 @@
 ﻿#include <iostream>
 using namespace std;
 
-const char* reverseChar(const char* s, int CharElement)
-{
-    
+const char* reverseChar(const char* s, int CharElement){
+
     int len = 0; 
      /*указатель на оставшуюся часть строки (его нужно вернуть)*/
     const char* rest_of_string = " ";
 
      /*проходим до конца строки пока не упремся в несуществующий элемент*/
-    
+
     while (s[len] != '\0') {
        
         if (s[len] == CharElement)
@@ -22,9 +21,9 @@ const char* reverseChar(const char* s, int CharElement)
         return rest_of_string;
 }
 
-char *strs(const char *s, const char *symbol){
+char* strs(const char *s, const char *symbol){
     do {
-        if (*s == *symbol) {
+        if (*s == *symbol){
 
             const char* buf = symbol;
             int k=0;
@@ -33,7 +32,7 @@ char *strs(const char *s, const char *symbol){
                 s++;
                 k++;
             }
-            if (k == strlen(symbol)) { //Возвращает длинну строки, оканчивающейся нулевым символом 
+            if (k == strlen(symbol)){ //Возвращает длинну строки, оканчивающейся нулевым символом 
                 return (char*)s - k;
             }
         }
