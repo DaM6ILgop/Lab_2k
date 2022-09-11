@@ -52,7 +52,7 @@ int main(){
     
     const char* str = "the really hard work";//свой вариант строки
     
-    char *str_2 = strs(str, "hard");//вызов метода
+    char *str_2 = strs(str, "r");//вызов метода
 
     printf("Initial string: %s\nStandard: %s\n",
         s, standard_result);
