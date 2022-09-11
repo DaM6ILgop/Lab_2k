@@ -7,7 +7,7 @@ void oneD_Array(double* array,  int oneDlen) {
 
 	for (int i = 0; i < oneDlen; i++){
 	
-		array[i] = i * sin(3.1415 * i / 25);
+		array[i] = i * sin(3.1415 * i / 25);//заполнение массива числами
 		
 		cout << array[i] << " ";
 	}
@@ -15,10 +15,10 @@ void oneD_Array(double* array,  int oneDlen) {
 
 double** twoD_Array(double* array1D, int twoDlen)
 {
-	double** arr2D = new double* [twoDlen];
+	double** arr2D = new double* [twoDlen]; // выделяем память под выходной массив 
 	
 	for (unsigned int i = 0; i < twoDlen; ++i){
-	
+	//еще под каждую строку\ряд
 		*(arr2D + i) = new double[twoDlen];
 	}
 	
@@ -35,9 +35,9 @@ double** twoD_Array(double* array1D, int twoDlen)
 	
 		for (int j = 0; j < twoDlen; j++) {
 
-			if (j==0){
+			if (j==0){//проверка на первый элемент 
 
-				arr2D[i][j] = arr2D[i][j+1] + arr2D[i][j+2] + arr2D[i][j+3];
+				arr2D[i][j] = arr2D[i][j+1] + arr2D[i][j+2] + arr2D[i][j+3]; //сумма элементов массива. Первый элемент содержит сумму остальных
 			}
 		}
 	}
@@ -48,7 +48,7 @@ double** twoD_Array(double* array1D, int twoDlen)
 		
 			/*cout << " |" << arr2D[i][j] << "  |  ";*/\
 
-			cout << setw(10) << arr2D[i][j] << "|";
+			cout << setw(10) << arr2D[i][j] << "|";//вывод массива. выделение 10 позиций на каждый элемент массива
 		}
 		cout << "\n";
 	}
