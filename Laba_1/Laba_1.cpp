@@ -13,7 +13,7 @@ void processArray(double array[], unsigned int N, int negElement[], unsigned int
 	}
 	
 	double average = 0.0;
-
+	//Поиск среднего значения в массиве
 	for (int i = 0; i < N; i++) {
 		average += array[i];
 	}
@@ -26,6 +26,7 @@ void processArray(double array[], unsigned int N, int negElement[], unsigned int
 	cout << "\n" << " ";
 		int a;
 		int b;
+	//Проверка на число положительное\отрицательное 
 	cout << "Введите первое число диапазона. Число должно быть меньше нуля" <<"\n";
 	cin >> a;
 	while ( a >= 0) {
