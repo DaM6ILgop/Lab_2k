@@ -52,7 +52,12 @@ double** twoD_Array(double* array1D, int twoDlen)
 		}
 		cout << "\n";
 	}
-	return arr2D;
+	for (int i = 0; i < twoDlen; i++) //если не работает , то надо удалить. Пушил вручную, гит отказывался коммитить 
+	{
+		return arr2D;
+		delete[] arr2D[i];
+	}
+	
 }
 
 int main()
