@@ -23,9 +23,9 @@ const char* reverseChar(const char* s, int CharElement){
 
 char* strs(const char *s, const char *symbol){
     do {
-        if (*s == *symbol){
+        if (*s == *symbol){//проверка на соответсвие строки с символом\словом
 
-            const char* buf = symbol;
+            const char* buf = symbol;//создание новой переменной 
             int k=0;
 
             while (*s == *buf++ && *s){
@@ -50,9 +50,9 @@ int main(){
 
     const char* standard_result = strrchr(s, '.');
     
-    const char* str = "the really hard work";
+    const char* str = "the really hard work";//свой вариант строки
     
-    char *str_2 = strs(str, "hard");
+    char *str_2 = strs(str, "hard");//вызов метода
 
     printf("Initial string: %s\nStandard: %s\nMy version: %s\n",
         s, standard_result, str_2);
