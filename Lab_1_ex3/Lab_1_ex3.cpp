@@ -54,7 +54,9 @@ int main(){
     
     char *str_2 = strs(str, "hard");//вызов метода
 
-    printf("Initial string: %s\nStandard: %s\nMy version: %s\n",
-        s, standard_result, str_2);
+    printf("Initial string: %s\nStandard: %s\n",
+        s, standard_result);
+    printf("Initial string: %s\nMyVersion: %s\n",
+        str, str_2);
     
 }
