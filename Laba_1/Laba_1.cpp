@@ -8,7 +8,7 @@ void processArray(double array[], unsigned int N, int negElement[], unsigned int
 
 	cout << "Массив заполненный рандомно" << "\n";
 	for (int i = 0; i < N;i++) {
-		array[i] = (double)(rand() % 30) - 15.0;
+		array[i] = (double)(rand() % 30) - 15.0; //Заполнение массива числами в диапазоне от -15 до 15
 		cout << array[i] << " ";
 	}
 	
@@ -48,12 +48,12 @@ void processArray(double array[], unsigned int N, int negElement[], unsigned int
 	cout<<"Перемноженный массив" << "\n";
 	for (int i = 0; i < N; i++) {
 		
-		if ((i+1) % 2 == 0) {
-			array[i] = array[i] * (a + rand() % (b - a + 1));
+		if ((i+1) % 2 == 0) { //проверка на четность индекса 
+			array[i] = array[i] * (a + rand() % (b - a + 1)); //перемножение элементов с четными индыксами на случайное число из диапазона 
 		}
 		cout << array[i] << " ";
 
-		if (array[i] < 0) {
+		if (array[i] < 0) { //присвоение отрицательных элементов массива в новый массив
 			count++;
 			negElement[i] = array[i];
 		}
@@ -69,12 +69,12 @@ void processArray(double array[], unsigned int N, int negElement[], unsigned int
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
+	setlocale(LC_ALL, "ru"); //чтобы вывод на консоль не выдавал мусорные значения 
 	const unsigned int len = 15;
 	double array[len] = { 0,0 };
 	const int len2 = 20;
 	int negatElement[len2] = { 0,0 };
-	srand(time(NULL));
+	srand(time(NULL)); //нужно для генерации чисел 
 	processArray(array, len, negatElement, len2);
 }
 
