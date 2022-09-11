@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
+//Генерим одомерный массив
 void oneD_Array(double* array,  int oneDlen) {
 
 	for (int i = 0; i < oneDlen; i++){
